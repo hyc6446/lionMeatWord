@@ -9,7 +9,9 @@
     "build": "vue-tsc --noEmit --skipLibCheck && vite build",
     "lint": "eslint src",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commitlint": "commitlint --config commitlint.config.js -e -V",
+    "commit": "git-cz"
   },
   "dependencies": {
     "@vueuse/core": "^8.9.2",
@@ -34,6 +36,8 @@
     "@typescript-eslint/parser": "^5.10.0",
     "@vitejs/plugin-vue": "^3.0.1",
     "@vitejs/plugin-vue-jsx": "2.0.0",
+    "commitizen": "^4.3.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.19.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
@@ -62,5 +66,10 @@
     "*.{ts,js,vue}": [
       "eslint"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   }
 }
