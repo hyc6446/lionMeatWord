@@ -15,6 +15,7 @@
         <template v-for="(item, index) in featureList" :key="index">
           <a :href="item.href" target="_blank">{{ item.name }}</a>
           <template v-if="!item.isEnd"> | </template>
+          此处做测试使用
         </template>
       </p>
     </div>
